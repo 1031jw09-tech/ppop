@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoVision: 영상미디어로 환경을 바꾸다</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; }
+    body { background-color: #f4f8f5; color: #333; overflow-x: hidden; scroll-behavior: smooth; }
+
+    header {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; color: white; background-attachment: fixed;
+    }
+    header h1 { font-size: 3em; margin-bottom: 10px; text-shadow: 2px 2px 6px #000; }
+    header p { font-size: 1.3em; max-width: 700px; }
+
+    section { padding: 80px 20px; max-width: 1000px; margin: auto; }
+    section h2 { font-size: 2em; margin-bottom: 20px; text-align: center; color: #2f855a; }
+    section p { line-height: 1.7; text-align: center; margin-bottom: 30px; }
+
+    .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .card {
+      background: white; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 280px; padding: 20px; transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card h3 { color: #256d47; margin-bottom: 10px; }
+
+    .cta {
+      text-align: center; margin-top: 40px;
+    }
+    button {
+      background-color: #2f855a; color: white; border: none; padding: 14px 30px;
+      border-radius: 30px; font-size: 1em; cursor: pointer; transition: background 0.3s;
+    }
+    button:hover { background-color: #276749; }
+
+    footer {
+      background: #2f855a; color: white; text-align: center; padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EcoVision</h1>
+    <p>영상미디어의 힘으로 지구의 목소리를 전달하다</p>
+  </header>
+
+  <section id="problems">
+    <h2>🌍 생태·환경·기후의 핵심 과제</h2>
+    <p>영상 미디어는 환경 위기의 실체를 시각적으로 전달하고, 사람들의 공감과 행동을 이끌어낼 수 있습니다.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>1️⃣ 기후변화의 시각화</h3>
+        <p>극단적인 기후 현상과 생태계 붕괴를 다큐멘터리나 단편 영상으로 표현하여 위기의 현실을 깨닫게 합니다.</p>
+      </div>
+      <div class="card">
+        <h3>2️⃣ 플라스틱 문제</h3>
+        <p>플라스틱의 순환과정, 바다로 흘러가는 경로를 모션그래픽 영상으로 표현해 문제의 심각성을 시각화합니다.</p>
+      </div>
+      <div class="card">
+        <h3>3️⃣ 도시 생태 회복</h3>
+        <p>도시의 회색 공간을 녹색 공간으로 바꾸는 사례를 인터뷰 영상으로 담아 시민들의 행동 변화를 이끌어냅니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ideas">
+    <h2>💡 미디어를 통한 해결 아이디어</h2>
+    <p>환경 캠페인을 ‘보는 것’에서 ‘참여하는 것’으로 바꾸는 영상 미디어 프로젝트를 제안합니다.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>🎥 캠페인 영상 제작</h3>
+        <p>청소년·대학생들이 직접 환경 주제를 영상으로 표현해 SNS에 공유하는 “#나의지구영상” 캠페인.</p>
+      </div>
+      <div class="card">
+        <h3>🛰️ VR 생태체험</h3>
+        <p>가상현실을 통해 사라지는 숲과 바다를 직접 체험하며, 환경 보전의 필요성을 느끼게 하는 미디어 프로젝트.</p>
+      </div>
+      <div class="card">
+        <h3>📱 인터랙티브 스토리</h3>
+        <p>사용자가 선택을 통해 지구의 미래가 달라지는 영상형 게임 콘텐츠 제작.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="action">
+    <h2>🚀 아이디어 실현하기</h2>
+    <p>이제 행동으로 옮길 차례입니다! 나의 영상 아이디어를 세상과 공유하세요.</p>
+    <div class="cta">
+      <button id="shareBtn">내 영상 아이디어 공유하기</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 EcoVision | 만든이: 영상미디어 전공 학생
+  </footer>
+
+  <script>
+    document.getElementById("shareBtn").addEventListener("click", function() {
+      const idea = prompt("당신의 환경 영상 아이디어를 간단히 써보세요 🌿");
+      if (idea) {
+        alert("멋진 아이디어예요! '" + idea + "'\n세상에 꼭 전해지길 바랍니다 🌏");
+      }
+    });
+  </script>
+</body>
+</html>
